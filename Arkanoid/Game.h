@@ -172,7 +172,6 @@ namespace Arkanoid {
 			this->Text = L"Arkanoid";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &Game::Game_FormClosing);
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Game::Game_KeyDown);
-			this->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Game::Game_KeyPress);
 			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Game::Game_KeyUp);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ball))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->EndInit();
@@ -182,9 +181,8 @@ namespace Arkanoid {
 
 		}
 		// zmienne potrzebne w poni¿szych funkcjach
-		int x, y, count_space = 0, lifes = 1;
+		int x, y, count_space = 0, lifes = 3;
 		char direction;
-		bool button_press = true;
 		
 #pragma endregion
 	private: System::Void Game_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
@@ -227,26 +225,31 @@ namespace Arkanoid {
 		{
 			y = -y;
 		}
-		else if (ball->Top >= Game::Height)
+		else if (ball->Top >= Game::Height) //gdy gora pilka przekroczy dolna krawedz okna
 		{
+			//wylaczamy timer oraz odejmujemy jedno zycie
 			timer->Enabled = false;
 			lifes--;
 			
-			if (lifes > 0)
+			if (lifes > 0) //gdy mamy jeszcze jakies zycia
 			{
+				// wyswietlenie wiadomosci o stracie zycia
 				MessageBox::Show("Straci³eœ ¿ycie", "Powiadomienie", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				//reset platformy oraz pilki
 				platform->Left = 565;
 				platform->Top = 660;
 				ball->Left = 628;
 				ball->Top = 634;
+				//zwolnienie blokady
 				count_space--;
+				//wlaczenie timera oraz zatrzymanie pilki
 				timer->Enabled = true;
 				x = 0;
 				y = 0;
 			}
 			else
 			{
-				
+				//wlaczenie i pokazanie przyciskow oraz pokazanie logo
 				button1->Enabled = true;
 				button2->Enabled = true;
 				logo->Visible = true;
@@ -255,10 +258,6 @@ namespace Arkanoid {
 			}
 
 		}
-	}
-	private: System::Void Game_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-		// wyzwalanie pilki spacj¹
-		
 	}
 private: System::Void Game_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 		// zdarzenie przy przytrzymaniu przycisku w lewo
@@ -286,7 +285,6 @@ private: System::Void Game_KeyDown(System::Object^ sender, System::Windows::Form
 			}
 			count_space++;
 		}
-	
 	}
 private: System::Void Game_KeyUp(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 		direction = 'X'; // gdy klawisze nie sa wcisniete przypisuje dowolna wartosc char, zeby zatrzymac platforme
@@ -294,24 +292,26 @@ private: System::Void Game_KeyUp(System::Object^ sender, System::Windows::Forms:
 
 private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		button1->Enabled = false;
-		button2->Enabled = false;
+		button1->Enabled = false; //wylaczanie przyciskow
+		button2->Enabled = false; //wylaczanie przyciskow
 		lifes = 3;
 
-		logo->Visible = false;
-		button1->Visible = false;
-		button2->Visible = false;
+		logo->Visible = false; //ukrywanie logo
+		button1->Visible = false; // ukrywanie przyciskow
+		button2->Visible = false; // ukrywanie przyciskow
+		// resetowanie platformy oraz pilki
 		platform->Left = 565;
 		platform->Top = 660;
 		ball->Left = 628;
 		ball->Top = 634;
+		//zwalnianie blokady
 		count_space--;
+		// wlaczenie timera oraz zatrzymanie pilki
 		timer->Enabled = true;
 		x = 0;
 		y = 0;
 }
 private: System::Void Button2_Click(System::Object^ sender, System::EventArgs^ e) {
-
 	Application::Exit();
 }
 };
