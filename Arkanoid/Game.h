@@ -50,6 +50,30 @@ namespace Arkanoid {
 	private: System::Windows::Forms::Label^ lifes_label;
 	private: System::Windows::Forms::Label^ pt_val_label;
 	private: System::Windows::Forms::Label^ Lf_val_label;
+	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::PictureBox^ pictureBox4;
+	private: System::Windows::Forms::PictureBox^ pictureBox5;
+	private: System::Windows::Forms::PictureBox^ pictureBox6;
+	private: System::Windows::Forms::PictureBox^ pictureBox10;
+	private: System::Windows::Forms::PictureBox^ pictureBox11;
+	private: System::Windows::Forms::PictureBox^ pictureBox12;
+	private: System::Windows::Forms::PictureBox^ pictureBox13;
+	private: System::Windows::Forms::PictureBox^ pictureBox3;
+	private: System::Windows::Forms::PictureBox^ pictureBox7;
+	private: System::Windows::Forms::PictureBox^ pictureBox8;
+	private: System::Windows::Forms::PictureBox^ pictureBox9;
+	private: System::Windows::Forms::PictureBox^ pictureBox14;
+	private: System::Windows::Forms::PictureBox^ pictureBox15;
+	private: System::Windows::Forms::PictureBox^ pictureBox16;
+	private: System::Windows::Forms::PictureBox^ pictureBox17;
+	private: System::Windows::Forms::PictureBox^ pictureBox18;
+	private: System::Windows::Forms::PictureBox^ pictureBox19;
+	private: System::Windows::Forms::PictureBox^ pictureBox20;
+	private: System::Windows::Forms::PictureBox^ pictureBox21;
+	private: System::Windows::Forms::PictureBox^ pictureBox22;
+	private: System::Windows::Forms::PictureBox^ pictureBox23;
+	private: System::Windows::Forms::PictureBox^ pictureBox24;
+	private: System::Windows::Forms::PictureBox^ pictureBox25;
 
 
 
@@ -94,10 +118,58 @@ namespace Arkanoid {
 			this->lifes_label = (gcnew System::Windows::Forms::Label());
 			this->pt_val_label = (gcnew System::Windows::Forms::Label());
 			this->Lf_val_label = (gcnew System::Windows::Forms::Label());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox10 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox11 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox12 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox13 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox14 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox15 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox16 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox17 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox18 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox19 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox20 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox21 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox22 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox23 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox24 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox25 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ball))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->platform))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox13))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox14))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox15))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox16))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox17))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox18))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox19))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox20))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox21))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox22))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox23))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox24))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox25))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// ball
@@ -232,12 +304,277 @@ namespace Arkanoid {
 			this->Lf_val_label->TabIndex = 10;
 			this->Lf_val_label->Text = L"3";
 			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox2->Location = System::Drawing::Point(102, 69);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(100, 50);
+			this->pictureBox2->TabIndex = 11;
+			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Tag = L"";
+			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox4->Location = System::Drawing::Point(102, 270);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(100, 50);
+			this->pictureBox4->TabIndex = 13;
+			this->pictureBox4->TabStop = false;
+			this->pictureBox4->Tag = L"";
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox5->Location = System::Drawing::Point(102, 203);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(100, 50);
+			this->pictureBox5->TabIndex = 14;
+			this->pictureBox5->TabStop = false;
+			this->pictureBox5->Tag = L"";
+			// 
+			// pictureBox6
+			// 
+			this->pictureBox6->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox6->Location = System::Drawing::Point(102, 136);
+			this->pictureBox6->Name = L"pictureBox6";
+			this->pictureBox6->Size = System::Drawing::Size(100, 50);
+			this->pictureBox6->TabIndex = 15;
+			this->pictureBox6->TabStop = false;
+			this->pictureBox6->Tag = L"";
+			// 
+			// pictureBox10
+			// 
+			this->pictureBox10->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox10->Location = System::Drawing::Point(290, 136);
+			this->pictureBox10->Name = L"pictureBox10";
+			this->pictureBox10->Size = System::Drawing::Size(100, 50);
+			this->pictureBox10->TabIndex = 23;
+			this->pictureBox10->TabStop = false;
+			this->pictureBox10->Tag = L"";
+			// 
+			// pictureBox11
+			// 
+			this->pictureBox11->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox11->Location = System::Drawing::Point(290, 203);
+			this->pictureBox11->Name = L"pictureBox11";
+			this->pictureBox11->Size = System::Drawing::Size(100, 50);
+			this->pictureBox11->TabIndex = 22;
+			this->pictureBox11->TabStop = false;
+			this->pictureBox11->Tag = L"";
+			// 
+			// pictureBox12
+			// 
+			this->pictureBox12->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox12->Location = System::Drawing::Point(290, 270);
+			this->pictureBox12->Name = L"pictureBox12";
+			this->pictureBox12->Size = System::Drawing::Size(100, 50);
+			this->pictureBox12->TabIndex = 21;
+			this->pictureBox12->TabStop = false;
+			this->pictureBox12->Tag = L"";
+			// 
+			// pictureBox13
+			// 
+			this->pictureBox13->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox13->Location = System::Drawing::Point(290, 69);
+			this->pictureBox13->Name = L"pictureBox13";
+			this->pictureBox13->Size = System::Drawing::Size(100, 50);
+			this->pictureBox13->TabIndex = 20;
+			this->pictureBox13->TabStop = false;
+			this->pictureBox13->Tag = L"";
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox3->Location = System::Drawing::Point(467, 136);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(100, 50);
+			this->pictureBox3->TabIndex = 27;
+			this->pictureBox3->TabStop = false;
+			this->pictureBox3->Tag = L"";
+			// 
+			// pictureBox7
+			// 
+			this->pictureBox7->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox7->Location = System::Drawing::Point(467, 203);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(100, 50);
+			this->pictureBox7->TabIndex = 26;
+			this->pictureBox7->TabStop = false;
+			this->pictureBox7->Tag = L"";
+			// 
+			// pictureBox8
+			// 
+			this->pictureBox8->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox8->Location = System::Drawing::Point(467, 270);
+			this->pictureBox8->Name = L"pictureBox8";
+			this->pictureBox8->Size = System::Drawing::Size(100, 50);
+			this->pictureBox8->TabIndex = 25;
+			this->pictureBox8->TabStop = false;
+			this->pictureBox8->Tag = L"";
+			// 
+			// pictureBox9
+			// 
+			this->pictureBox9->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox9->Location = System::Drawing::Point(467, 69);
+			this->pictureBox9->Name = L"pictureBox9";
+			this->pictureBox9->Size = System::Drawing::Size(100, 50);
+			this->pictureBox9->TabIndex = 24;
+			this->pictureBox9->TabStop = false;
+			this->pictureBox9->Tag = L"";
+			// 
+			// pictureBox14
+			// 
+			this->pictureBox14->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox14->Location = System::Drawing::Point(648, 136);
+			this->pictureBox14->Name = L"pictureBox14";
+			this->pictureBox14->Size = System::Drawing::Size(100, 50);
+			this->pictureBox14->TabIndex = 31;
+			this->pictureBox14->TabStop = false;
+			this->pictureBox14->Tag = L"";
+			// 
+			// pictureBox15
+			// 
+			this->pictureBox15->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox15->Location = System::Drawing::Point(648, 203);
+			this->pictureBox15->Name = L"pictureBox15";
+			this->pictureBox15->Size = System::Drawing::Size(100, 50);
+			this->pictureBox15->TabIndex = 30;
+			this->pictureBox15->TabStop = false;
+			this->pictureBox15->Tag = L"";
+			// 
+			// pictureBox16
+			// 
+			this->pictureBox16->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox16->Location = System::Drawing::Point(648, 270);
+			this->pictureBox16->Name = L"pictureBox16";
+			this->pictureBox16->Size = System::Drawing::Size(100, 50);
+			this->pictureBox16->TabIndex = 29;
+			this->pictureBox16->TabStop = false;
+			this->pictureBox16->Tag = L"";
+			// 
+			// pictureBox17
+			// 
+			this->pictureBox17->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox17->Location = System::Drawing::Point(648, 69);
+			this->pictureBox17->Name = L"pictureBox17";
+			this->pictureBox17->Size = System::Drawing::Size(100, 50);
+			this->pictureBox17->TabIndex = 28;
+			this->pictureBox17->TabStop = false;
+			this->pictureBox17->Tag = L"";
+			// 
+			// pictureBox18
+			// 
+			this->pictureBox18->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox18->Location = System::Drawing::Point(833, 136);
+			this->pictureBox18->Name = L"pictureBox18";
+			this->pictureBox18->Size = System::Drawing::Size(100, 50);
+			this->pictureBox18->TabIndex = 35;
+			this->pictureBox18->TabStop = false;
+			this->pictureBox18->Tag = L"";
+			// 
+			// pictureBox19
+			// 
+			this->pictureBox19->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox19->Location = System::Drawing::Point(833, 203);
+			this->pictureBox19->Name = L"pictureBox19";
+			this->pictureBox19->Size = System::Drawing::Size(100, 50);
+			this->pictureBox19->TabIndex = 34;
+			this->pictureBox19->TabStop = false;
+			this->pictureBox19->Tag = L"";
+			// 
+			// pictureBox20
+			// 
+			this->pictureBox20->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox20->Location = System::Drawing::Point(833, 270);
+			this->pictureBox20->Name = L"pictureBox20";
+			this->pictureBox20->Size = System::Drawing::Size(100, 50);
+			this->pictureBox20->TabIndex = 33;
+			this->pictureBox20->TabStop = false;
+			this->pictureBox20->Tag = L"";
+			// 
+			// pictureBox21
+			// 
+			this->pictureBox21->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox21->Location = System::Drawing::Point(833, 69);
+			this->pictureBox21->Name = L"pictureBox21";
+			this->pictureBox21->Size = System::Drawing::Size(100, 50);
+			this->pictureBox21->TabIndex = 32;
+			this->pictureBox21->TabStop = false;
+			this->pictureBox21->Tag = L"";
+			// 
+			// pictureBox22
+			// 
+			this->pictureBox22->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox22->Location = System::Drawing::Point(1021, 136);
+			this->pictureBox22->Name = L"pictureBox22";
+			this->pictureBox22->Size = System::Drawing::Size(100, 50);
+			this->pictureBox22->TabIndex = 39;
+			this->pictureBox22->TabStop = false;
+			this->pictureBox22->Tag = L"";
+			// 
+			// pictureBox23
+			// 
+			this->pictureBox23->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox23->Location = System::Drawing::Point(1021, 203);
+			this->pictureBox23->Name = L"pictureBox23";
+			this->pictureBox23->Size = System::Drawing::Size(100, 50);
+			this->pictureBox23->TabIndex = 38;
+			this->pictureBox23->TabStop = false;
+			this->pictureBox23->Tag = L"";
+			// 
+			// pictureBox24
+			// 
+			this->pictureBox24->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox24->Location = System::Drawing::Point(1021, 270);
+			this->pictureBox24->Name = L"pictureBox24";
+			this->pictureBox24->Size = System::Drawing::Size(100, 50);
+			this->pictureBox24->TabIndex = 37;
+			this->pictureBox24->TabStop = false;
+			this->pictureBox24->Tag = L"";
+			// 
+			// pictureBox25
+			// 
+			this->pictureBox25->BackColor = System::Drawing::Color::LimeGreen;
+			this->pictureBox25->Location = System::Drawing::Point(1021, 69);
+			this->pictureBox25->Name = L"pictureBox25";
+			this->pictureBox25->Size = System::Drawing::Size(100, 50);
+			this->pictureBox25->TabIndex = 36;
+			this->pictureBox25->TabStop = false;
+			this->pictureBox25->Tag = L"";
+			// 
 			// Game
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Highlight;
 			this->ClientSize = System::Drawing::Size(1264, 681);
+			this->Controls->Add(this->logo);
+			this->Controls->Add(this->pictureBox22);
+			this->Controls->Add(this->pictureBox23);
+			this->Controls->Add(this->pictureBox24);
+			this->Controls->Add(this->pictureBox25);
+			this->Controls->Add(this->pictureBox18);
+			this->Controls->Add(this->pictureBox19);
+			this->Controls->Add(this->pictureBox20);
+			this->Controls->Add(this->pictureBox21);
+			this->Controls->Add(this->pictureBox14);
+			this->Controls->Add(this->pictureBox15);
+			this->Controls->Add(this->pictureBox16);
+			this->Controls->Add(this->pictureBox17);
+			this->Controls->Add(this->pictureBox3);
+			this->Controls->Add(this->pictureBox7);
+			this->Controls->Add(this->pictureBox8);
+			this->Controls->Add(this->pictureBox9);
+			this->Controls->Add(this->pictureBox10);
+			this->Controls->Add(this->pictureBox11);
+			this->Controls->Add(this->pictureBox12);
+			this->Controls->Add(this->pictureBox13);
+			this->Controls->Add(this->pictureBox6);
+			this->Controls->Add(this->pictureBox5);
+			this->Controls->Add(this->pictureBox4);
+			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->Lf_val_label);
 			this->Controls->Add(this->pt_val_label);
 			this->Controls->Add(this->lifes_label);
@@ -246,7 +583,6 @@ namespace Arkanoid {
 			this->Controls->Add(this->platform);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->logo);
 			this->Controls->Add(this->ball);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
@@ -259,19 +595,98 @@ namespace Arkanoid {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->platform))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox13))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox14))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox15))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox16))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox17))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox18))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox19))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox20))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox21))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox22))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox23))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox24))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox25))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 		// zmienne potrzebne w poni¿szych funkcjach
-		int x, y, count_space = 0, lifes = 3, points = 0;
+		int x, y, count_space = 0, lifes = 3, points = 0, count_bricks = 24;
 		char direction;
 		
 #pragma endregion
+	private: void collision_green(System::Windows::Forms::Control^ target)
+	{
+		if ((ball->Top + ball->Height > target->Top) && (ball->Top < target->Top + target->Height) &&
+			(ball->Left + ball->Width > target->Left) && (ball->Left < target->Left + target->Width))
+		{
+			if ((ball->Right > target->Right) || (ball->Left < target->Left))
+			{
+				x = -x;
+				target->BackColor = System::Drawing::Color::Gold;
+			}
+			else if ((ball->Top < target->Top) || (ball->Bottom > target ->Bottom))
+			{
+				y = -y;
+				target->BackColor = System::Drawing::Color::Gold;
+			}
+		}
+	}
+	private: void collision_gold(System::Windows::Forms::Control^ target)
+	{
+		if ((ball->Top + ball->Height > target->Top) && (ball->Top < target->Top + target->Height) &&
+			(ball->Left + ball->Width > target->Left) && (ball->Left < target->Left + target->Width) && (target ->Visible == Enabled))
+		{
+			if ((ball->Right > target->Right) || (ball->Left < target->Left))
+			{
+				x = -x;
+				target->Visible = false;
+				points += 5;
+				pt_val_label->Text = "" + points;
+				count_bricks--;
+			}
+			else
+			{
+				y = -y;
+				target->Visible = false;
+				points += 5;
+				pt_val_label->Text = "" + points;
+				count_bricks--;
+			}
+		}
+	}
+	
+
 	private: System::Void Game_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
 		Application::Exit(); //zamyka program przy wcisniêciu "zamknij" (x) na tym oknie
 	}
 	private: System::Void Timer_Tick(System::Object^ sender, System::EventArgs^ e) {
+		// Rozpoznawanie obiektow po ich kolorze tla i wywolywanie odpowiednich funkcji 
+		for each (Control ^ item in this->Controls)
+		{
+			if (item->BackColor == System::Drawing::Color::LimeGreen)
+			{
+				collision_green(item);
+			}
+			else if (item->BackColor == System::Drawing::Color::Gold)
+			{
+				collision_gold(item);
+			}
+		}
+		// Nadanie predkosci pileczce
 		ball->Left += x;
 		ball->Top += y;
 		//odbijanie od krawedzi bocznych
@@ -287,19 +702,19 @@ namespace Arkanoid {
 		//sterowanie platforma w lewo / drugi if odpowiada za ruch w lewo z pilka 
 		if (direction == 'L' && platform->Left > 0)
 		{
-			platform->Left -= 15;
+			platform->Left -= 20;
 			if (count_space == 0)
 			{
-				ball->Left -= 15;
+				ball->Left -= 20;
 			}
 		}
 		// sterowanie platforma w prawo / drugi if odpowiada za ruch w prawo z pilka
 		if (direction == 'R' && platform->Left < 1120)
 		{
-			platform->Left += 15;
+			platform->Left += 20;
 			if (count_space == 0)
 			{
-				ball->Left += 15;
+				ball->Left += 20;
 			}
 		}
 		//Odbijanie pilki od platformy
@@ -343,7 +758,25 @@ namespace Arkanoid {
 				button1->Visible = true;
 				button2->Visible = true;
 			}
-
+		}
+		//Wygrana
+		if (count_bricks <= 0)
+		{
+			// Zatrzymanie timera
+			timer->Enabled = false;
+			// Schowanie pilki
+			ball->Visible = false;
+			// Dodanie punktow za pozostale zycia
+			points += lifes * 10;
+			pt_val_label->Text = "" + points;
+			//Wiadomosc o wygranej
+			MessageBox::Show("Wygra³eœ!", "Wygrana", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			//wlaczenie i pokazanie przyciskow oraz pokazanie logo
+			button1->Enabled = true;
+			button2->Enabled = true;
+			logo->Visible = true;
+			button1->Visible = true;
+			button2->Visible = true;
 		}
 	}
 private: System::Void Game_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
@@ -380,8 +813,8 @@ private: System::Void Game_KeyUp(System::Object^ sender, System::Windows::Forms:
 
 private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		button1->Enabled = false; //wylaczanie przyciskow
-		button2->Enabled = false; //wylaczanie przyciskow
+		button1->Enabled = false; //wylaczanie przyciskow koncowych
+		button2->Enabled = false; //wylaczanie przyciskow koncowych
 		// reset zyc oraz punktow do wartosci poczatkowych
 		lifes = 3;
 		points = 0;
@@ -402,10 +835,22 @@ private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e
 		timer->Enabled = true;
 		x = 0;
 		y = 0;
+		// reset ilosci klockow
+		count_bricks = 24;
+		// ponowne pokazanie klockow
+		for each (Control ^ item in this->Controls)
+		{
+			if (item->BackColor == System::Drawing::Color::Gold)
+			{
+				item->BackColor = System::Drawing::Color::LimeGreen;
+				item->Visible = true;
+			}
+		}
+		// ponowne pokazanie pilki
+		ball->Visible = Enabled;
 }
 private: System::Void Button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	Application::Exit();
 }
-
 };
 }
