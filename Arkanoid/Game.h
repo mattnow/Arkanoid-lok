@@ -1,7 +1,8 @@
 #pragma once
+#include <string.h>
 
 namespace Arkanoid {
-
+	
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -44,6 +45,15 @@ namespace Arkanoid {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::PictureBox^ platform;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Label^ points_label;
+	private: System::Windows::Forms::Label^ lifes_label;
+	private: System::Windows::Forms::Label^ pt_val_label;
+	private: System::Windows::Forms::Label^ Lf_val_label;
+
+
+
+
 
 
 
@@ -79,9 +89,15 @@ namespace Arkanoid {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->platform = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->points_label = (gcnew System::Windows::Forms::Label());
+			this->lifes_label = (gcnew System::Windows::Forms::Label());
+			this->pt_val_label = (gcnew System::Windows::Forms::Label());
+			this->Lf_val_label = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ball))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->platform))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// ball
@@ -155,12 +171,78 @@ namespace Arkanoid {
 			this->platform->TabIndex = 5;
 			this->platform->TabStop = false;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::SystemColors::AppWorkspace;
+			this->pictureBox1->Location = System::Drawing::Point(0, 0);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(1280, 45);
+			this->pictureBox1->TabIndex = 6;
+			this->pictureBox1->TabStop = false;
+			// 
+			// points_label
+			// 
+			this->points_label->AutoSize = true;
+			this->points_label->BackColor = System::Drawing::SystemColors::AppWorkspace;
+			this->points_label->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->points_label->ForeColor = System::Drawing::Color::White;
+			this->points_label->Location = System::Drawing::Point(37, 13);
+			this->points_label->Name = L"points_label";
+			this->points_label->Size = System::Drawing::Size(73, 19);
+			this->points_label->TabIndex = 7;
+			this->points_label->Text = L"Punkty: ";
+			// 
+			// lifes_label
+			// 
+			this->lifes_label->AutoSize = true;
+			this->lifes_label->BackColor = System::Drawing::SystemColors::AppWorkspace;
+			this->lifes_label->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->lifes_label->ForeColor = System::Drawing::Color::White;
+			this->lifes_label->Location = System::Drawing::Point(1109, 13);
+			this->lifes_label->Name = L"lifes_label";
+			this->lifes_label->Size = System::Drawing::Size(59, 19);
+			this->lifes_label->TabIndex = 8;
+			this->lifes_label->Text = L"¯ycia: ";
+			// 
+			// pt_val_label
+			// 
+			this->pt_val_label->AutoSize = true;
+			this->pt_val_label->BackColor = System::Drawing::SystemColors::AppWorkspace;
+			this->pt_val_label->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->pt_val_label->ForeColor = System::Drawing::Color::White;
+			this->pt_val_label->Location = System::Drawing::Point(105, 13);
+			this->pt_val_label->Name = L"pt_val_label";
+			this->pt_val_label->Size = System::Drawing::Size(18, 19);
+			this->pt_val_label->TabIndex = 9;
+			this->pt_val_label->Text = L"0";
+			// 
+			// Lf_val_label
+			// 
+			this->Lf_val_label->AutoSize = true;
+			this->Lf_val_label->BackColor = System::Drawing::SystemColors::AppWorkspace;
+			this->Lf_val_label->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->Lf_val_label->ForeColor = System::Drawing::Color::White;
+			this->Lf_val_label->Location = System::Drawing::Point(1163, 13);
+			this->Lf_val_label->Name = L"Lf_val_label";
+			this->Lf_val_label->Size = System::Drawing::Size(18, 19);
+			this->Lf_val_label->TabIndex = 10;
+			this->Lf_val_label->Text = L"3";
+			// 
 			// Game
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Highlight;
 			this->ClientSize = System::Drawing::Size(1264, 681);
+			this->Controls->Add(this->Lf_val_label);
+			this->Controls->Add(this->pt_val_label);
+			this->Controls->Add(this->lifes_label);
+			this->Controls->Add(this->points_label);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->platform);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
@@ -176,12 +258,13 @@ namespace Arkanoid {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ball))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->platform))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 		// zmienne potrzebne w poni¿szych funkcjach
-		int x, y, count_space = 0, lifes = 3;
+		int x, y, count_space = 0, lifes = 3, points = 0;
 		char direction;
 		
 #pragma endregion
@@ -189,16 +272,15 @@ namespace Arkanoid {
 		Application::Exit(); //zamyka program przy wcisniêciu "zamknij" (x) na tym oknie
 	}
 	private: System::Void Timer_Tick(System::Object^ sender, System::EventArgs^ e) {
-		
 		ball->Left += x;
 		ball->Top += y;
 		//odbijanie od krawedzi bocznych
-		if (ball->Left >= 1250 || ball->Left <=0 )
+		if (ball->Left >= 1230 || ball->Left <=0 )
 		{
 			x = -x;
 		}
 		//odbijanie od krawedzi gornej
-		if (ball->Top <= 0)
+		if ((ball->Top - 45) < 0)
 		{
 			y = -y;
 		}
@@ -227,10 +309,13 @@ namespace Arkanoid {
 		}
 		else if (ball->Top >= Game::Height) //gdy gora pilka przekroczy dolna krawedz okna
 		{
-			//wylaczamy timer oraz odejmujemy jedno zycie
+			//wylaczamy timer, odejmujemy jedno zycie i 10 punktow
 			timer->Enabled = false;
 			lifes--;
-			
+			points -= 10;
+			// aktualizujemy wyswietlane wartosci
+			Lf_val_label->Text = "" + lifes;
+			pt_val_label->Text = "" + points;
 			if (lifes > 0) //gdy mamy jeszcze jakies zycia
 			{
 				// wyswietlenie wiadomosci o stracie zycia
@@ -249,6 +334,8 @@ namespace Arkanoid {
 			}
 			else
 			{
+				//Wiadomosc o przegranej
+				MessageBox::Show("Przegra³eœ!", "Przegrana", MessageBoxButtons::OK, MessageBoxIcon::Information);
 				//wlaczenie i pokazanie przyciskow oraz pokazanie logo
 				button1->Enabled = true;
 				button2->Enabled = true;
@@ -273,6 +360,7 @@ private: System::Void Game_KeyDown(System::Object^ sender, System::Windows::Form
 		//wyzwalanie pilki klawiszem spacji
 		if (e->KeyCode == Keys::Space && count_space == 0)
 		{
+			// w zalezosci od ilosci zyc zmienia sie kierunek wyzwalania pilki
 			if (lifes % 2 == 0)
 			{
 				x = 10;
@@ -294,8 +382,12 @@ private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e
 
 		button1->Enabled = false; //wylaczanie przyciskow
 		button2->Enabled = false; //wylaczanie przyciskow
+		// reset zyc oraz punktow do wartosci poczatkowych
 		lifes = 3;
-
+		points = 0;
+		// zresetowanie wyswietlania
+		Lf_val_label->Text = "" + lifes;
+		pt_val_label->Text = "" + points;
 		logo->Visible = false; //ukrywanie logo
 		button1->Visible = false; // ukrywanie przyciskow
 		button2->Visible = false; // ukrywanie przyciskow
@@ -314,5 +406,6 @@ private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void Button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	Application::Exit();
 }
+
 };
 }
