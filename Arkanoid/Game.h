@@ -1,5 +1,4 @@
 #pragma once
-#include <string.h>
 
 namespace Arkanoid {
 	
@@ -74,20 +73,6 @@ namespace Arkanoid {
 	private: System::Windows::Forms::PictureBox^ pictureBox23;
 	private: System::Windows::Forms::PictureBox^ pictureBox24;
 	private: System::Windows::Forms::PictureBox^ pictureBox25;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -638,7 +623,7 @@ namespace Arkanoid {
 				x = -x;
 				target->BackColor = System::Drawing::Color::Gold;
 			}
-			else if ((ball->Top < target->Top) || (ball->Bottom > target ->Bottom))
+			else 
 			{
 				y = -y;
 				target->BackColor = System::Drawing::Color::Gold;
@@ -718,16 +703,17 @@ namespace Arkanoid {
 			}
 		}
 		//Odbijanie pilki od platformy
-		if (ball->Left > platform->Left  && ball->Left < platform->Right && ball->Top + ball->Height > platform ->Top && ball->Top < platform->Bottom)
+		if (ball->Right > platform->Left  && ball->Left < platform->Right && ball->Bottom > platform ->Top)
 		{
-			y = -y;
+				y = -y;
 		}
-		else if (ball->Top >= Game::Height) //gdy gora pilka przekroczy dolna krawedz okna
+		else if (ball->Top > platform->Top) //gdy stracimy pilke
 		{
-			//wylaczamy timer, odejmujemy jedno zycie i 10 punktow
+			//wylaczamy timer, odejmujemy jedno zycie i 10 punktow, ukrywamy pilek
 			timer->Enabled = false;
 			lifes--;
 			points -= 10;
+			ball->Visible = false;
 			// aktualizujemy wyswietlane wartosci
 			Lf_val_label->Text = "" + lifes;
 			pt_val_label->Text = "" + points;
@@ -746,6 +732,8 @@ namespace Arkanoid {
 				timer->Enabled = true;
 				x = 0;
 				y = 0;
+				// pokazujemy pilke
+				ball->Visible = true;
 			}
 			else
 			{
