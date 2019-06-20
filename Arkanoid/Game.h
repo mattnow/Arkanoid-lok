@@ -660,7 +660,7 @@ namespace Arkanoid {
 	}
 	private: System::Void Timer_Tick(System::Object^ sender, System::EventArgs^ e) {
 		// Rozpoznawanie obiektow po ich kolorze tla i wywolywanie odpowiednich funkcji 
-		for each (Control ^ item in this->Controls)
+		for each (Control^ item in this->Controls)
 		{
 			if (item->BackColor == System::Drawing::Color::LimeGreen)
 			{
@@ -826,7 +826,7 @@ private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e
 		// reset ilosci klockow
 		count_bricks = 24;
 		// ponowne pokazanie klockow
-		for each (Control ^ item in this->Controls)
+		for each (Control^ item in this->Controls)
 		{
 			if (item->BackColor == System::Drawing::Color::Gold)
 			{
