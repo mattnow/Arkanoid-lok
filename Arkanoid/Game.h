@@ -644,7 +644,7 @@ namespace Arkanoid {
 				//Zmiana koloru
 				target->BackColor = System::Drawing::Color::Gold;
 				//DŸwiêk uderzenia
-				play_break("C:/Users/artur/Desktop/GRA/zbicie.mp3");
+				play_break(".../zbicie.mp3");
 			}
 			//Pi³ka z góry/do³u
 			else 
@@ -654,7 +654,7 @@ namespace Arkanoid {
 				//Zmiana koloru
 				target->BackColor = System::Drawing::Color::Gold;
 				//DŸwiêk uderzenia
-				play_break("C:/Users/artur/Desktop/GRA/zbicie.mp3");
+				play_break(".../zbicie.mp3");
 			}
 		}
 	}
@@ -673,7 +673,7 @@ namespace Arkanoid {
 				points += 5;
 				pt_val_label->Text = "" + points;
 				count_bricks--;
-				play_break("C:/Users/artur/Desktop/GRA/zbicie.mp3");
+				play_break(".../zbicie.mp3");
 			}
 			else
 			{
@@ -684,7 +684,7 @@ namespace Arkanoid {
 				points += 5;
 				pt_val_label->Text = "" + points;
 				count_bricks--;
-				play_break("C:/Users/artur/Desktop/GRA/zbicie.mp3");
+				play_break(".../zbicie.mp3");
 			}
 		}
 	}
@@ -739,7 +739,7 @@ namespace Arkanoid {
 		//Odbijanie pilki od platformy
 		if (ball->Right > platform->Left  && ball->Left < platform->Right && ball->Bottom > platform ->Top)
 		{
-			y = -(y+10);
+			y = -(y);
 		}
 		else if (ball->Top > platform->Top) //gdy stracimy pilke
 		{
