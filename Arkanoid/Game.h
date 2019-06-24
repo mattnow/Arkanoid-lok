@@ -574,6 +574,7 @@ namespace Arkanoid {
 			this->Name = L"Game";
 			this->Text = L"Arkanoid";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &Game::Game_FormClosing);
+			this->Load += gcnew System::EventHandler(this, &Game::Game_Load);
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Game::Game_KeyDown);
 			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Game::Game_KeyUp);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ball))->EndInit();
@@ -613,47 +614,80 @@ namespace Arkanoid {
 		char direction;
 		
 #pragma endregion
+
+		//Granie dŸwiêku
+	private: Void play_break(String^ break_sound)
+	{
+		try 
+		{
+				System::Media::SoundPlayer^ play = gcnew System::Media::SoundPlayer();
+				play->SoundLocation = break_sound;
+				play->Load();
+				play->Play();
+		}
+		catch (...)
+		{
+		}
+	}
+	
+	// Sprawdzenie kolizji w przypadku uderzenia w zielony blok
 	private: void collision_green(System::Windows::Forms::Control^ target)
 	{
-		if ((ball->Top + ball->Height > target->Top) && (ball->Top < target->Top + target->Height) &&
-			(ball->Left + ball->Width > target->Left) && (ball->Left < target->Left + target->Width))
+		//Sprawdzamy czy pi³ka jest nad, pod, z lewej czy z prawej
+		if ((ball->Top + ball->Height > target->Top) && (ball->Top < target->Top + target->Height) &&(ball->Left + ball->Width > target->Left) && (ball->Left < target->Left + target->Width))
 		{
+			//Pi³ka z boku
 			if ((ball->Right > target->Right) || (ball->Left < target->Left))
 			{
+				//Odpowiednie Odbicie
 				x = -x;
+				//Zmiana koloru
 				target->BackColor = System::Drawing::Color::Gold;
+				//DŸwiêk uderzenia
+				play_break("C:/Users/artur/Desktop/GRA/zbicie.mp3");
 			}
+			//Pi³ka z góry/do³u
 			else 
 			{
+				//Odpowiednie Odbicie
 				y = -y;
+				//Zmiana koloru
 				target->BackColor = System::Drawing::Color::Gold;
+				//DŸwiêk uderzenia
+				play_break("C:/Users/artur/Desktop/GRA/zbicie.mp3");
 			}
 		}
 	}
+	//Kolizja z blokiem z³otym(analagicznie do bloku zielonego)
 	private: void collision_gold(System::Windows::Forms::Control^ target)
 	{
-		if ((ball->Top + ball->Height > target->Top) && (ball->Top < target->Top + target->Height) &&
-			(ball->Left + ball->Width > target->Left) && (ball->Left < target->Left + target->Width) && (target ->Visible == Enabled))
+		if ((ball->Top + ball->Height > target->Top) && (ball->Top < target->Top + target->Height) &&(ball->Left + ball->Width > target->Left) && (ball->Left < target->Left + target->Width) && (target ->Visible == Enabled))
 		{
 			if ((ball->Right > target->Right) || (ball->Left < target->Left))
 			{
+
 				x = -x;
+				//Usuniêcie klocka
 				target->Visible = false;
+				//Aktualizacja punktacji
 				points += 5;
 				pt_val_label->Text = "" + points;
 				count_bricks--;
+				play_break("C:/Users/artur/Desktop/GRA/zbicie.mp3");
 			}
 			else
 			{
 				y = -y;
+				//Usuniêcie klocka
 				target->Visible = false;
+				//Aktualizacja punktacji
 				points += 5;
 				pt_val_label->Text = "" + points;
 				count_bricks--;
+				play_break("C:/Users/artur/Desktop/GRA/zbicie.mp3");
 			}
 		}
 	}
-	
 
 	private: System::Void Game_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
 		Application::Exit(); //zamyka program przy wcisniêciu "zamknij" (x) na tym oknie
@@ -671,7 +705,7 @@ namespace Arkanoid {
 				collision_gold(item);
 			}
 		}
-		// Nadanie predkosci pileczce
+		// Dodawanie wartosci polozenia pileczki, funkcja jest uzalezniona od taktowania
 		ball->Left += x;
 		ball->Top += y;
 		//odbijanie od krawedzi bocznych
@@ -705,7 +739,7 @@ namespace Arkanoid {
 		//Odbijanie pilki od platformy
 		if (ball->Right > platform->Left  && ball->Left < platform->Right && ball->Bottom > platform ->Top)
 		{
-				y = -y;
+			y = -(y+10);
 		}
 		else if (ball->Top > platform->Top) //gdy stracimy pilke
 		{
@@ -839,6 +873,8 @@ private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void Button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	Application::Exit();
+}
+private: System::Void Game_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

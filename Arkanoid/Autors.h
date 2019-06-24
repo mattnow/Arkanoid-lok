@@ -95,6 +95,7 @@ namespace Arkanoid {
 			this->MaximizeBox = false;
 			this->Name = L"Autors";
 			this->Text = L"Autorzy";
+			this->Load += gcnew System::EventHandler(this, &Autors::Autors_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -104,6 +105,8 @@ namespace Arkanoid {
 	}
 	private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close(); // zamyka okienko po wciœniêciu OK
+	}
+	private: System::Void Autors_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
 }
